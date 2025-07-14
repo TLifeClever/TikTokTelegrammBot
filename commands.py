@@ -1,4 +1,4 @@
-from aiogram import  Router
+from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
@@ -10,7 +10,7 @@ router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.reply('Привет! Отправь мне ссылку на видео из Тиктока или Ютуба до 50мб(один ютуб шортс или видео в тт) , и я помогу тебе скачать его!')
+    await message.reply('Привет! Отправь мне ссылку на видео из Тиктока или Ютуба до 50мб (один ютуб шортс или видео в ТТ), и я помогу тебе скачать его!')
 
 @router.message(lambda message: "tiktok.com" in message.text or "youtube.com" in message.text or "youtu.be" in message.text)
 async def video_request(message: Message):
@@ -19,5 +19,4 @@ async def video_request(message: Message):
     storage.url_storage[url_id] = url
     storage.save_url_storage(storage.url_storage)
     storage.url_storage = storage.load_url_storage()
-    await message.answer("Выберите формат загрузки:", reply_markup= await in_kb.format_btn(url_id))
-
+    await message.answer("Выберите формат загрузки:", reply_markup=await in_kb.format_btn(url_id))
