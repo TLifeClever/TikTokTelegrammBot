@@ -7,10 +7,8 @@ import asyncio
 from aiogram.types import FSInputFile
 from task_storage import active_tasks
 
-
 def generate_url_id(url: str):
     return hashlib.md5(url.encode()).hexdigest()
-
 
 async def download_and_send_media(bot, chat_id, url, media_type, url_id):
     os.makedirs("downloads", exist_ok=True)
