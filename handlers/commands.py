@@ -4,6 +4,7 @@ from aiogram.types import Message
 
 import keyboard.inline_kb as in_kb
 import handlers as hf
+from function import generate_url_id
 import url_storage as storage
 
 router = Router()

@@ -1,7 +1,7 @@
 from aiogram import Bot, Router
 from aiogram.types import CallbackQuery
 
-from handlers import download_and_send_media
+from function import download_and_send_media
 import url_storage as storage
 import task_storage
 import keyboard.inline_kb as in_kb
