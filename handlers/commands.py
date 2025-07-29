@@ -3,7 +3,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 import keyboard.inline_kb as in_kb
-import handlers.function as hf
+import handlers as hf
 import url_storage as storage
 
 router = Router()

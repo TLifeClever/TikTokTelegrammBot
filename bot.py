@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from handlers import callback, commands
 
+
 async def main():
     load_dotenv()
     token = os.getenv('BOT_TOKEN')
